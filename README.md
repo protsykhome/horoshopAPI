@@ -50,3 +50,5 @@ php bin/console doctrine:migrations:migrate
 6. Запуск сервера:
 php -S localhost:8000 -t public
 
+
+7. Також для зручності тут є постман коллекція, вона у корні.
