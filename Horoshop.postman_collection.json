@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "ef698760-5da5-4a5d-a1bc-79c9d900d491",
+		"name": "Horoshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27549911"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"login\": \"admin\",\n  \"phone\": \"12345678\",\n  \"password\": \"1234\",\n  \"role\": \"ROLE_ADMIN\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"login\": \"admin\",\n  \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzExNzc4MzYsImV4cCI6MTczMTE4MTQzNiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluIn0.Lmu5ncmk7V5kD6Q-CUdS5XU4qnjTNRK6qeRi0fnemgeLYjrxeL2rbBxfZRYMztp0NXYLF8WfQG7ARTzQlOPpZpe-nw4xiF_c_r-geMmGT5IYPpwtR1mkkCkQhOqk2KSVHdw7zHuEM8LKMhbcwREb9zaf6bZZpfJAamqgOHttvhfrCaGSFJsh5ijqKX-k59oS7TMb7SzvRVhMaGWU3N8DflBCyPfd7ajnO-AMPhLchxtrn8qpLywzy-H7eQemusMjZadspPpaTZyBgkCKm63sHavJ57YRbH9rID5ugPdOEAMlXgCKW_AurA44g1MFl4mLTfUVXrCmhrq3o_tO-TG83g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\": \"login2\",\n    \"password\": \"1234568\",\n    \"phone\": \"1145646\",\n    \"role\": \"ROLE_USER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/v1/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzExNzc1NjAsImV4cCI6MTczMTE4MTE2MCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWRtaW4ifQ.no74RE17eNvUKoD2hH4EE77Frq5z84Fdq2AVIe6ZgTQPgVyKtVqEIG1xbHGyvpEdLvQXuNW5iAjelSpwQ2N1zF05jGBpzP3bOoUcnXQYnQRgpaxS9t7cp7jFadSTkxl2U42s6_amcOFt6JFiOZEXHlXXy03mM_tusvqKDeFKtIJpf8Lh3A76sNn6vJa2sxRmI2vGGZC5lvGW8v07Bp6TaxmW4BG_bgLCdpGd6-USNWlyCizSF2XwvP14xdYNSEg8lBxHz80IjPbm3x18bpXnJGIot5IwK0nuCb21uRzG2LgiSzpFRd1GGFsAfSJIarWdoNCd_k2_JsbmJbRD5qHv-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzEwOTA3NzEsImV4cCI6MTczMTA5NDM3MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoibmV3X3VzZTUifQ.wJdNVA9u_vl85ktTvKFGem4wdkLWLVfImeb3v9jN4mg9660JMyY0KGqb7CuKcRp6Xzzm1_QJPDUqSq_qmqTej-nCakAJVmHX2hh8vu8rZDVkBEMuq0PnkmtXd-fHQp-Dyb48XEj5NXOGHoXlRGgG88p0lmQp1ncGTcROONtd_vPy6g-2jweJ94pzFEm5BT_EmPP9Xv8TEjb8ayjfSX-sw1qHJG-j7lqYhgrjDlsP2vr6zNL8njEVj3PsI8Ljqo1SCHOykuutquED7NP0pIZukOUZ61faObRy-sHp2Fe89tlV_hddr6Qfrmf93ltkUha6TJ58SxWozmvG_Lnp3z8zog",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/v1/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzExNzEwNzgsImV4cCI6MTczMTE3NDY3OCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluMiJ9.P3gbqEsp3ymv-vbltbJMsE-b5pXVDrYJkQnffwwsNBZuQXhIlavOEmx7jHFv_Rpq_zjn_pnPe9pH6SClMGKysZdyg0L2hQ5e2kbOzMA9Gk1VtCAZC0XXUfes8rr6-BMz7bBdJXUPTsCAXft-yfrwiFvSgmXMvU1eT66CZqTispkryfFbXUk4RzHDMUtWYxAj-jpmU2muEhhGZKHK81hxW1gD8gPXbk6UZDd8CFXwTG3qEdSqUJlGONqQdIAfTajBooifnYoe4-S94MZab1iNd0GSPWyaiP50mTVKdl8dAtQPV4Ic-yZO4FL6pPMoE28_oBh7aSFACkeD4SOUQRXzVg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"login\": \"admin5\",\n\"password\": \"12345678\",\n\"phone\": \"12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/v1/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzExNzc4MzYsImV4cCI6MTczMTE4MTQzNiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluIn0.Lmu5ncmk7V5kD6Q-CUdS5XU4qnjTNRK6qeRi0fnemgeLYjrxeL2rbBxfZRYMztp0NXYLF8WfQG7ARTzQlOPpZpe-nw4xiF_c_r-geMmGT5IYPpwtR1mkkCkQhOqk2KSVHdw7zHuEM8LKMhbcwREb9zaf6bZZpfJAamqgOHttvhfrCaGSFJsh5ijqKX-k59oS7TMb7SzvRVhMaGWU3N8DflBCyPfd7ajnO-AMPhLchxtrn8qpLywzy-H7eQemusMjZadspPpaTZyBgkCKm63sHavJ57YRbH9rID5ugPdOEAMlXgCKW_AurA44g1MFl4mLTfUVXrCmhrq3o_tO-TG83g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
